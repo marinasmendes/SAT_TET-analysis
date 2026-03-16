@@ -1,5 +1,5 @@
-target_participant <- 2
-target_session_type <- "MindWandering1"
+target_participant <- 3
+target_session_type <- "MindWandering2"
 threshold <- 0.3  # cutoff for displaying strength
 
 
@@ -53,7 +53,7 @@ pair_list <- data.frame(
 )
 
 
-strong_pairs <- subset(pair_list, Pearson_r > threshold)
+strong_pairs <- subset(pair_list, abs(Pearson_r) > threshold)
 strong_pairs <- strong_pairs[order(-strong_pairs$Pearson_r), ]
 
 print("---------------------------------------------------------")
